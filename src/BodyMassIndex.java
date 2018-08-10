@@ -12,5 +12,18 @@ public class BodyMassIndex {
         height = scanner.nextDouble();
         System.out.println("Nhập vào cân nặng của cơ thể(kg): ");
         weight = scanner.nextDouble();
+
+        //Tính chỉ số BMI và đưa ra kết luận
+        bmi = weight / Math.pow(height,2);
+        if (bmi < 18.5){
+            System.out.println("BMI = " + bmi + "\t\t\t UnderWeight");
+        }else if (18.5 <= bmi && bmi < 25.0){
+            System.out.println("BMI = " + bmi + "\t\t\t Normal");
+        }
+        else if (25 <= bmi && bmi < 30.0){
+            System.out.println("BMI = " + bmi + "\t\t\t Overweight");
+        }else {
+            System.out.println("BMI = " + bmi + "\t\t\t Obese");
+        }
     }
 }
